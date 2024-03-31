@@ -1,6 +1,10 @@
 .hero {
   position: relative;
   padding-bottom: 200px;
+
+  background-image: url(../img/hero-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .hero__block {
@@ -29,22 +33,6 @@
   line-height: 28px;
 }
 
-.hero__bg-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero__bg-wrapper-2 {
-  position: absolute;
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 40px;
@@ -62,9 +50,13 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1100px) {
   .hero {
     padding-top: 55px;
+
+    background-repeat: no-repeat;
+    background-image: url(../img/hero-bg.svg), url(../img/hero-bg-2.svg);
+    background-position: 85% bottom, left top 40px;
   }
 
   .hero__block {
@@ -97,16 +89,5 @@
     height: 4px;
     background-color: #79c8c7;
     margin-bottom: 80px;
-  }
-
-  .hero__bg-wrapper {
-    display: block;
-    left: 63%;
-  }
-
-  .hero__bg-wrapper-2 {
-    display: block;
-    left: 0;
-    top: 55px;
   }
 }

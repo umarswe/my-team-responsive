@@ -1,0 +1,121 @@
+.service {
+  background-color: #012f34;
+  padding: 100px 0 64px 0;
+
+  background-image: url(../img/service-bg.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.service__title {
+  width: 230px;
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 56px;
+}
+
+.service__title::before {
+  content: "";
+  width: 50px;
+  height: 4px;
+  display: block;
+  background-color: #f67e7e;
+  margin-bottom: 32px;
+}
+
+.service__box-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.service__box {
+  text-align: center;
+}
+
+.service__box::before {
+  content: "";
+  width: 72px;
+  height: 72px;
+  display: inline-block;
+
+  background-image: url(../img/service-box-icon-1.svg);
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+}
+
+.service__box:nth-child(2)::before {
+  background-image: url(../img/service-box-icon-2.svg);
+}
+
+.service__box:nth-child(2)::before {
+  background-image: url(../img/service-box-icon-3.svg);
+}
+
+.service__box-title {
+  color: #f67e7e;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+.service__box-description {
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    padding: 100px;
+  }
+
+  .service__title {
+    width: 445px;
+    margin-bottom: 64px;
+  }
+
+  .service__box {
+    text-align: start;
+    display: flex;
+    gap: 23px;
+
+    &::before {
+      flex-shrink: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .service {
+    padding: 140px 0;
+
+    background-image: url(../img/service-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+  .service__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .service__title {
+    width: 445px;
+  }
+
+  .service__title::before {
+    margin-bottom: 54px;
+  }
+
+  .service__box-wrapper {
+    width: 540px;
+  }
+}
